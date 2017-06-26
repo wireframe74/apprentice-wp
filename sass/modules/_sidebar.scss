@@ -1,0 +1,54 @@
+
+
+#newscolumn .nav {
+    background: $dark-grey;
+    
+    
+    li.current-menu-item a {
+    background-color:  $primary-color;;
+    color:#fff;
+    }
+
+
+    
+
+   li {
+    display: block;
+    clear: both;
+
+            a { @extend .body-copy;
+                display: block;
+                padding: 17px 29px;
+                color: #d8dfe5; 
+                font-size: .9em;
+                box-shadow: inset 0 0 0 0 $primary-color;
+                -webkit-transition: all ease 0.4s;
+                -moz-transition: all ease 0.4s;
+                transition: all ease 0.4s; 
+                border: 0;
+                font-weight:normal;
+
+                 &:hover {
+ 
+                    box-shadow: inset 340px 0 0 0 $primary-color;
+                    color:#fff;
+                }
+            }
+
+    }
+
+
+     // &--itm.active { 
+     //    a {
+     //    background: $primary-color;
+     //    color:#fff;
+     //    }
+     // }
+
+
+
+
+
+}
+
+   

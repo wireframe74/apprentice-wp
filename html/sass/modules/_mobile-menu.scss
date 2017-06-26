@@ -1,0 +1,245 @@
+.menu-button {
+    display: none;
+    position: absolute;
+    font-size: 35px;
+    right: 14px;
+    cursor: pointer;
+    top: 20px;
+    color: #000;
+}
+
+
+
+.sticky-header .menu-button { 
+top:6px;
+}
+
+
+@media screen and (max-width: 1100px) { 
+
+	.menu-button {
+    display: inline-block;
+    top: -5px;
+    right: 30px;
+    color:#fff;
+	}
+
+  .show-menu {
+    .menu-button {
+      color: #000
+    }
+  }
+
+}
+
+
+
+/*********************
+Responsive Menu
+*********************/
+.responsive-menu {
+  z-index: 101;
+  -ms-overflow-y: scroll;
+  overflow-y: scroll;
+  position: fixed;
+  right: -320px;
+  top: 0;
+  padding-top: 45px;
+  bottom: 0;
+  max-width: 300px;
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: #FFF;
+  -webkit-transition: right 0.2s ease;
+  -moz-transition: right 0.2s ease;
+  -ms-transition: right 0.2s ease;
+  -o-transition: right 0.2s ease;
+  transition: right 0.2s ease;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  /* Plus Minus */
+  /* End of Plus Minus*/
+}
+
+.responsive-menu::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+
+.responsive-menu nav {
+  padding: 5% 0;
+}
+
+.responsive-menu nav > ul > li > a:hover {
+  color: #0188b2;
+}
+
+.responsive-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.responsive-menu ul li {
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+  border-bottom: 1px solid #f1f2f2;
+}
+
+.responsive-menu ul li a {
+  float: left;
+  width: 100%;
+  display: block;
+  padding: 13px 28px;
+}
+
+.responsive-menu ul li:last-child {
+  border-bottom: none;
+}
+
+.responsive-menu .sub-menu {
+  padding-left: 4%;
+}
+
+.responsive-menu .sub-menu li {
+  border-bottom: 1px solid #f1f2f2;
+}
+
+.responsive-menu .sub-menu li a {
+  text-transform: none;
+}
+
+.responsive-menu .sub-menu li a:hover {
+  color: #ffb400;
+}
+
+.responsive-menu .menu-item-has-children {
+  position: relative;
+}
+
+.responsive-menu .has-details {
+  right: 0;
+  width: 47px;
+  height: 47px;
+  top: 0px;
+}
+
+.responsive-menu .has-details:after {
+  right: 22px;
+  top: 11px;
+  width: 4px;
+  height: 25px;
+}
+
+.responsive-menu .has-details:before {
+  right: 11px;
+  top: 21px;
+  width: 25px;
+  height: 4px;
+}
+
+.responsive-menu .show {
+  background-color: #f1f2f2;
+}
+
+.responsive-menu .show:after {
+  height: 0;
+}
+
+.responsive-menu ul.sub-menu {
+  display: inline-block;
+  width: 100%;
+}
+
+.responsive-menu .current-menu-item > a, .responsive-menu .current_page_ancestor > a {
+  color: #0188b2;
+}
+
+.responsive-menu .search {
+  margin-top: 30px;
+  border-top: 1px solid #0188b2;
+  border-bottom: 1px solid #0188b2;
+  width: 100%;
+  padding-left: 13px;
+  float: left;
+}
+
+.responsive-menu .search input[type="text"] {
+  display: inline-block;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  color: #000;
+  text-transform: none;
+}
+
+.responsive-menu .search input[type="text"]::-webkit-input-placeholder {
+  color: #000;
+}
+
+.responsive-menu .search input[type="text"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000;
+}
+
+.responsive-menu .search input[type="text"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000;
+}
+
+.responsive-menu .search input[type="text"]:-ms-input-placeholder {
+  color: #000;
+}
+
+.responsive-menu .search button {
+  background-color: #303030;
+  color: #FFF;
+  float: right;
+  font-size: 24px;
+  padding: 12px 20px;
+}
+
+.responsive-menu .search button:hover {
+  background-color: #171717;
+}
+
+.responsive-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.responsive-menu .head-button-area {
+  display: none;
+  margin-top: 37px;
+  text-align: center;
+}
+
+.responsive-menu .head-button-area .but1 {
+  margin-right: 0;
+  margin-bottom: 8px;
+}
+
+.responsive-menu .menu-button {
+  font-size: 50px;
+}
+
+.customize-support .responsive-menu {
+  top: 32px;
+}
+
+.show-menu {
+  right: 0;
+}
+
+.hide-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+}
