@@ -19,7 +19,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
    
   
   
-  echo'<div class="postCollapse fullwidth">';
+  echo'<div class="postCollapse col-xs-12">';
             // the_loop begin
            
 			echo'<section>';
@@ -28,7 +28,11 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
 <?php the_content();?>
 <?php 
    
- echo'</section></div>';
+ echo'</section>
+
+
+
+ </div>';
 
   
             // anything after the loop?

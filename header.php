@@ -5,20 +5,20 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
   */
-echo'<!DOCTYPE html>
-<html ';language_attributes();echo'>
-<head>
-<meta charset="UTF-8" />
-<title>
-';wp_title( '|', true, 'right' ); 
-echo'</title>
-<link rel="pingback" href="';
-bloginfo('pingback_url');echo'" />';
-
-if ( is_singular() ) wp_enqueue_script( "comment-reply" );?>
- <meta name="viewport" content="width=device-width, initial-scale=0">
-<?php wp_head();
 ?>
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
+<head>
+<meta charset="<?php bloginfo('charset'); ?>">
+<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php wp_head(); ?>
+
+
+
+
+
 
 
 <script src="<?php bloginfo('template_directory' ); ?>/js/jquery.fitvids.js"></script>
@@ -66,11 +66,10 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );?>
  
 <!-- <link rel="stylesheet" type="text/css" href="<?php // bloginfo('template_directory' ); ?>/css/accordian.css"> -->
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'> -->
 <script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/jquery.placeholder.min.js"></script>
 <!-- <script type="text/javascript" src="<?php // bloginfo('template_directory' ); ?>/js/fixed.js"></script> -->
-<script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/aigwd.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/accordion.js"></script>
+
  
 <!--[if gte IE 8]>
 <style>
@@ -87,75 +86,115 @@ form input {
  </style>
 <![endif]-->
 </head><body <?php body_class();?>>
+<div id="preloader"></div>
 <!-- OVERALL CONTAINER TAG --><div id="full">
+
+<section  class="responsive-menu">
+<div class="menu-button">×</div>
+
+<nav id="main-nav" role="navigation">
+ <?php wp_nav_menu( array(
+'theme_location' => 'primary_menu',
+'depth'             => 2,
+'container'         => false,
+// 'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse nav navbar-nav navbar-right',
+'menu_class'        => 'sm sm-blue',
+'menu_id'        => '',
+// 'walker'         => new WPSE_78121_Sublevel_Walker
+)
+);
+?>
+ </nav>
+</section>
+
+
+
 
 <header class="aig-header sticky-aig-header scrolling clearfix " id="aig-header" role="banner">
 
-<div class="container menu-global">
+    <div class="container menu-global">
 
-<div class="aig-logo-wrapper">
-<a class="aig-logo aig-logo--white" href="#">AI Group</a>
-</div>
+        <div class="aig-logo-wrapper">
+        <a class="aig-logo aig-logo--white" href="<?php bloginfo('url' ); ?>">AIGTS</a>
+        </div>
 
-
-
-
-
-<div class="menu-button"><i class="fa fa-bars"></i></div>
+        <div class="menu-button"><i class="fa fa-bars"></i></div>
 
 
 
-<div class="responsive-menu">
-<div class="menu-button">×</div>
-<nav class="mobile-menu">
-<ul class="nav navbar-nav">
-<li><a href="#">Current Vacancies</a></li>
-<li><a href="#">Sign In</a></li>
-<li><a href="#">Policies</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
-</div>
 
 
 
-<div class="header-buttons" id="header-buttons">
-
-  <ul class="nav navbar-nav">
-  <li><a href="#">Current Vacancies</a></li>
-  <li><a href="#">Sign In</a></li>
-  <li><a href="#">Policies</a></li>
-  <li><a href="#">Contact</a></li>
-
-  <li class="header-icon header-icon__facebook"><a target="_blank" href="https://www.facebook.com/AiGroupATC/"></a></li>
-  <li class="header-icon header-icon__search"><a href="#search"></a></li>
-  </ul>
-
-<!-- LOGIN MENU ITEMS HERE -->
-                 
-</div><!-- header-buttons -->
-</div><!-- container -->
-
-          <!-- NEGATIVE MARGINS  MAIN NAV -->
-        <nav class="main-menu" id="main-menu" role="navigation">
-               
-
-
-    <?php wp_nav_menu(array(
-		'theme_location' => 'primary_menu',
-		'menu_class' => 'main-menu-list container', // menu slug from step 1
-		'container' => false, // 'div' container will not be added
-		'menu_class' => 'nav', // <ul class="nav"> 
-		'fallback_cb' => 'default_header_nav', // name of default function from step 2
-	)); ?>
 
 
 
-            </nav>
+
+
+        <div class="header-buttons" id="header-buttons">
+          <ul class="nav navbar-nav">
+          <li><a href="<?php bloginfo('url'); ?>/all-jobs/">Current Vacancies</a></li>
+          <li><a href="<?php bloginfo('url'); ?>/apply">Sign In</a></li>
+          <li><a href="<?php bloginfo('url'); ?>/policies/">Policies</a></li>
+          <li><a href="<?php bloginfo('url'); ?>/contact/">Contact</a></li>
+          <li class="header-icon header-icon__facebook"><a target="_blank" href="https://www.facebook.com/AiGroupATC/"></a></li>
+          <li class="header-icon header-icon__search"><a href="#search"></a></li>
+          </ul>
+        </div><!-- header-buttons -->
+    </div><!-- menu-global container -->
+
+  <!-- NEGATIVE MARGINS  MAIN NAV -->
+
+
+  <nav class="main-menu" id="main-menu" role="navigation">
 
 
 
-        </header>
+<?php 
+wp_nav_menu( array(
+
+'theme_location' => 'primary_menu',
+'depth'             => 2,
+'container'         => false,
+// 'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse nav navbar-nav navbar-right',
+'menu_class'        => 'main-menu-list container',
+'walker'         => new WPSE_78121_Sublevel_Walker
+)
+);
+?>
+
+
+
+
+      <?php //wp_nav_menu(array(
+  		// 'theme_location' => 'primary_menu',
+  		// 'menu_class' => 'main-menu-list container', // menu slug from step 1
+  		// 'container' => false, // 'div' container will not be added
+  		// 'menu_class' => 'nav', // <ul class="nav"> 
+  		// // 'fallback_cb' => 'default_header_nav', // name of default function from step 2
+
+    //    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+    //    'walker'            => new wp_bootstrap_navwalker())
+  	//)); ?>
+  </nav>
+
+
+
+           
+    <?php 
+     // wp_nav_menu( array(
+    
+     //    'theme_location' => 'primary_menu',
+     //   'depth'             => 2,
+     //   'container'         => 'div',
+     //   'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse nav navbar-nav navbar-right',
+     //   'menu_class'        => 'nav navbar-nav',
+     //   'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+     //   'walker'            => new wp_bootstrap_navwalker())
+     // );
+ ?>
+
+
+</header>
 
 
 
@@ -163,48 +202,35 @@ form input {
 <!-- PUSH DOWN CONTENT DIV -->
 <div id="pagecontent">
 
-
-
-
-
-
   <section class="hero-container autoplay-video__hero">
         <div class="hero hero-video dark-bg">
           <div class="container hero__container">
             <div class="row hero__row">
               <div class="col-lg-6 col-md-6 col-sm-12 center">
                 <h1 class="aig-heading hero--headline">The right job helps you create the future you want.</h1>
-               
                   <p class="hero--paragraph">AI Group Recruitment Services - Building Tomorrow's Workforce</p>
-       
-                
                   <div class="clearfix"></div><a class="aig-btn aig-btn__reversed hero--btn"  href="#" role="button">Sign Up Now</a>
-         
               </div>
             </div>
           </div>
         </div>
-      </section>
+   </section>
 
 
     <section id="breadcrumb">
-
         <div class="container">
         <div class="row">
         <div class="col-xs-12">
-
-                <ul>
-                <li class="breadcrumb--first"><a href="#">Home</a> </li>
-                <li><a href="#">Employers</a> </li>
-                <li>Apprentice Training</li>
-                </ul>
-
+            <ul>
+            <li class="breadcrumb--first"><a href="#">Home</a> </li>
+            <li><a href="#">Employers</a> </li>
+            <li>Apprentice Training</li>
+            </ul>
         </div>
         </div>
         </div>
-
     </section>
 
 
 
-<div id="maincontentwrapper" class="content container">
+<div id="maincontentwrapper" class="content <?php if(!is_front_page()) :?>container<?php endif; ?>">

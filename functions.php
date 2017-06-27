@@ -11,7 +11,37 @@
         // footer widgets
         // left widget
         // right widget
-        
+  
+
+
+// require_once('wp_bootstrap_navwalker.php');
+
+// function my_wp_nav_menu_args($args = '')
+// {
+//     $args['container'] = false;
+//     return $args;
+// }
+
+
+
+class WPSE_78121_Sublevel_Walker extends Walker_Nav_Menu
+{
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='megamenu' aria-hidden='true'><div class='container'><ul class='sub-menu'>\n";
+    }
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul></div></div>\n";
+    }
+}
+
+
+
+function custom_length_excerpt($word_count_limit) {
+    $content = wp_strip_all_tags(get_the_content() , true );
+    echo wp_trim_words($content, $word_count_limit);
+}
 		
 		
         function reSpare_setup() {

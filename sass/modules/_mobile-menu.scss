@@ -19,14 +19,17 @@ top:6px;
 
 	.menu-button {
     display: inline-block;
-    top: -5px;
-    right: 30px;
-    color:#fff;
+    top: -6px;
+    right: 25px;
+    color: #fff
+
 	}
 
   .show-menu {
     .menu-button {
-      color: #000
+  color: #fff;
+    top: 10px;
+    font-size: 42px;
     }
   }
 
@@ -38,7 +41,7 @@ top:6px;
 Responsive Menu
 *********************/
 .responsive-menu {
-  z-index: 101;
+  z-index:1011111111111;
   -ms-overflow-y: scroll;
   overflow-y: scroll;
   position: fixed;
@@ -49,7 +52,7 @@ Responsive Menu
   max-width: 300px;
   width: 100%;
   padding-bottom: 20px;
-  background-color: #FFF;
+  background-color:#222d32;
   -webkit-transition: right 0.2s ease;
   -moz-transition: right 0.2s ease;
   -ms-transition: right 0.2s ease;
@@ -70,6 +73,18 @@ Responsive Menu
   padding: 5% 0;
 }
 
+.responsive-menu  .menu-item.home a {
+background: url(../images/icons/home.svg) top left no-repeat;
+    width: 17px;
+    text-indent: -9999px;
+    background-size: 16px;
+    display: block;
+    position: relative;
+    top:10px;
+    left: 20px;
+    padding-bottom: 0;
+}
+
 .responsive-menu nav > ul > li > a:hover {
   color: #0188b2;
 }
@@ -83,34 +98,33 @@ Responsive Menu
   float: left;
   width: 100%;
   margin-bottom: 0;
-  border-bottom: 1px solid #f1f2f2;
+
 }
 
 .responsive-menu ul li a {
   float: left;
   width: 100%;
   display: block;
-  padding: 13px 28px;
+
 }
 
 .responsive-menu ul li:last-child {
   border-bottom: none;
 }
 
-.responsive-menu .sub-menu {
-  padding-left: 4%;
-}
 
 .responsive-menu .sub-menu li {
-  border-bottom: 1px solid #f1f2f2;
+  // border-bottom: 1px solid #f1f2f2;
 }
 
 .responsive-menu .sub-menu li a {
   text-transform: none;
+  color:#ccc;
+  @extend .body-copy;
 }
 
 .responsive-menu .sub-menu li a:hover {
-  color: #ffb400;
+  color:#fff; 
 }
 
 .responsive-menu .menu-item-has-children {
@@ -152,7 +166,7 @@ Responsive Menu
 }
 
 .responsive-menu .current-menu-item > a, .responsive-menu .current_page_ancestor > a {
-  color: #0188b2;
+  color: #FFF;
 }
 
 .responsive-menu .search {
@@ -204,8 +218,9 @@ Responsive Menu
 
 .responsive-menu ul {
   list-style: none;
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
+  text-align:left;
 }
 
 .responsive-menu .head-button-area {
@@ -219,8 +234,11 @@ Responsive Menu
   margin-bottom: 8px;
 }
 
-.responsive-menu .menu-button {
-  font-size: 50px;
+body .aig-header  .responsive-menu .menu-button {
+  font-size: 40px;
+  color:#fff;
+  top: -2px;
+    right: 15px;
 }
 
 .customize-support .responsive-menu {
@@ -243,3 +261,133 @@ Responsive Menu
     z-index: 1;
     display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile first layout SmartMenus Core CSS (it's not recommended editing these rules)
+   You need this once per page no matter how many menu trees or different themes you use.
+-------------------------------------------------------------------------------------------*/
+
+.sm{position:relative;z-index:9999;}
+.sm,.sm ul,.sm li{display:block;list-style:none;margin:0;padding:0;line-height:normal;direction:ltr;text-align:left;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.sm-rtl,.sm-rtl ul,.sm-rtl li{direction:rtl;text-align:right;}
+.sm>li>h1,.sm>li>h2,.sm>li>h3,.sm>li>h4,.sm>li>h5,.sm>li>h6{margin:0;padding:0;}
+.sm ul{display:none;}
+.sm li,.sm a{position:relative;}
+.sm a{display:block;}
+.sm a.disabled{cursor:not-allowed;}
+.sm:after{content:"\00a0";display:block;height:0;font:0px/0 serif;clear:both;visibility:hidden;overflow:hidden;}
+.sm,.sm *,.sm *:before,.sm *:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+.sm-blue {
+  background: transparent;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
+  padding: 10px 20px;
+  /* make room for the toggle button (sub indicator) */
+  padding-right: 58px;
+
+  color: white;
+  @extend .heading-font;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 23px;
+  text-decoration: none;
+
+}
+.sm-blue a.current {
+  background: #006892;
+  background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, #006188), color-stop(100%, #006f9c));
+  background-image: -webkit-linear-gradient(to bottom, #006188, #006f9c);
+  background-image: -moz-linear-gradient(to bottom, #006188, #006f9c);
+  background-image: -o-linear-gradient(to bottom, #006188, #006f9c);
+  background-image: linear-gradient(to bottom, #006188, #006f9c);
+  color: white;
+}
+.sm-blue a.disabled {
+  color: #a1d1e8;
+}
+.sm-blue a span.sub-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  left: auto;
+  right: 15px;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  font: bold 24px/34px monospace !important;
+  text-align: center;
+  text-shadow: none;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.sm-blue a.highlighted span.sub-arrow:before {
+  display: block;
+  content: '-';
+}
+
+.sm-blue ul {
+  background:#334047; 
+}
+.sm-blue ul ul {
+  background: rgba(102, 102, 102, 0.1);
+}
+.sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  text-shadow: none;
+  border-left: 8px solid transparent;
+}
+
+.sm-blue ul a.disabled {
+  color: #b3b3b3;
+}
+
+.sm-blue ul li {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.sm-blue ul li:first-child {
+  border-top: 0;
+}
+

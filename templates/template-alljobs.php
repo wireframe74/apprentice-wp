@@ -27,7 +27,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
  
   echo'</div> ';
   
-  echo'<div class="postCollapse apprentices alljobs">';
+  echo'<div id="jobs-listing" class="postCollapse apprentices alljobs">';
             // the_loop begin
            
 			echo'<section>';

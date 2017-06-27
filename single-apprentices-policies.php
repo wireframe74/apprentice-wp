@@ -29,7 +29,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
  
   echo'</div> ';
   
-  echo'<div class="postCollapse col-xs-12 col-md-6" style="width:800px!important;margin-right: 0em!important; margin-left: 300px!important;">';
+  echo'<div class="postCollapse col-xs-12 col-md-9">';
             // the_loop begin
            
 			echo'<section>';

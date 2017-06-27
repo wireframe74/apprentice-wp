@@ -4,9 +4,11 @@
 // SCROLL
 
 
+.aig-header.change li.menu-item-has-children > a {
+	color:#333;
+}
 
-
-.aig-header.change .main-link[rel=menuitem]:after {
+.aig-header.change li.menu-item-has-children > a:after {
     border: 1px solid #e15115;
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
@@ -33,13 +35,17 @@
 
 .aig-header.change {
 
-.menu-button {
-    color: #222;
-}
+
+	#menu-main-menu li.menu-item.home a {
+		background: url(../images/icons/home-dark.svg) top left no-repeat;
+	}
 
 
 
- background: #fff;
+
+
+	 z-index: 1000000000;
+	 background: #fff;
     -webkit-transition: margin .3s ease-out 0s;
     -moz-transition: margin .3s ease-out 0s;
     -ms-transition: margin .3s ease-out 0s;
@@ -53,7 +59,15 @@
         background: none;
     }
 
-    .main-link {
+
+    .menu-button {
+    color: #222;
+	}
+
+
+
+
+    .li.menu-item-has-children > a {
         color: #333;
         &:hover {
             color: #fff;
@@ -94,7 +108,7 @@
 
 }
 
-
+// ORANGE BG
 
 .reversed {
 
@@ -104,7 +118,7 @@
 		@extend .aig-logo--white
 	}
 
-	.navbar-nav>li>a {
+	#menu-main-menu li.menu-item-has-children{
     color: #fff;
     }
 
@@ -121,7 +135,7 @@
 
 	}
 
-	.main.home a {
+	#menu-main-menu li.menu-item.home a {
 		background: url(../images/icons/home.svg) top left no-repeat;
 	}
 

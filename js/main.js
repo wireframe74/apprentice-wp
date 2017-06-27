@@ -3,7 +3,7 @@
     // 1. Give it 200 milliseconds before doing anything
     // 2. Check if another megamenu is already visible (the user is quickly going from link to link). If so, show the content of the new megamenu without any slide animation and hide the previous one. If no megamenu is currently visible and the hovered li.main has a megamenu, slide it down
 
-   
+
 
 
 
@@ -13,31 +13,21 @@ jQuery(function($) {
 
 
 
-var pContainerHeight = jQuery('.bird-box').height();
-
-jQuery(window).scroll(function($){
-
-  var wScroll = jQuery(this).scrollTop();
-
-  if (wScroll <= pContainerHeight) {
-
-    jQuery('.hero--headline').css({
-    'transform' : 'translate(0px, '+ wScroll /2 +'%)'
+$('.sm.sm-blue').smartmenus({
+      subMenusSubOffsetX: 1,
+      subMenusSubOffsetY: -8
     });
 
-    jQuery('.hero--paragraph').css({
-    'transform' : 'translate(0px, '+ wScroll /2.6 +'%)'
-    });
 
-    jQuery('.hero--btn').css({
-    'transform' : 'translate(0px, -'+ wScroll /40 +'%)'
-    });
+// PRELOADER
 
-  }
-
+var options = {
+classname: 'my-class',
+id: 'preloader',
+target: document.getElementById('myDivId')
+};
 
 
-});
 
 
 
@@ -46,7 +36,7 @@ $( "#jobs-listing .applybutton a").text("View this Job");
 $( "#rightcolumn .applybutton a").text("Apply Today");
 
 
-         $('#findaspecialist input, #findaspecialist select').addClass('form-control');
+$('#findaspecialist input, #findaspecialist select').addClass('form-control');
 
 $('#st-accordion').accordion();
 
@@ -98,66 +88,33 @@ $('#st-accordion').accordion();
 
   // SCROLL ADD CLASS HEADER
 
-  $(window).scroll(function() {    
+$(window).scroll(function() {    
 
-
- function scrolledHeaderClass() {
-
-var timer;
-
-$siteheader.find('nav li.main').hover(
-
-// function(){
-// clearTimeout(timer);
-// $siteheader.removeClass('change');
-// $siteheader.addClass('reversed');
-// },
-
-// function(){
-//   $siteheader.removeClass('reversed');
-//   timer = setTimeout(
-//     function(){
-//       $siteheader.addClass('change');
-//     }, 600)
-//  }
-
-
-
-    function () {
-      $siteheader.removeClass('change');
-       $siteheader.addClass('reversed');
-    },
-
-    function(){
-      $siteheader.removeClass('reversed');
-          setTimeout(function() {
-          $siteheader.addClass('change');
-      }, 600);
-    }
-
-  );
-}
-
-// $siteheader = $('#aig-header');
-
-
-//   $siteheader.hover(
-//         function () {
-//         $siteheader.addClass('reversed');
-//         },
-
-//         function(){
-//         $siteheader.removeClass('reversed');
-//         }
-//   );
 
     var scroll = $(window).scrollTop();
-
+    
     if(scroll >= 100) {
         $(".aig-header").addClass("change");
 
 
-  scrolledHeaderClass() ;
+
+$siteheader.find('li.menu-item-has-children > a').mouseenter(function() {
+$siteheader.removeClass('change');
+$siteheader.addClass('reversed');
+});
+
+
+
+
+
+$megamenu.mouseleave(function() {
+$siteheader.removeClass('reversed');
+          setTimeout(function() {
+          $siteheader.addClass('change');
+      }, 600);
+});
+
+
 
     } else {
         $(".aig-header").removeClass("change");
@@ -167,16 +124,16 @@ $siteheader.find('nav li.main').hover(
 
 
 
-  var $siteheader = $('#aig-header');
+  var $siteheader = $('.aig-header');
     var $megamenu = $siteheader.find('nav li .megamenu');
     var $pagecontent = $('#pagecontent');
 
     // initiate timeout variables
     hoverTimeout = "";
     leaveTimeout = "";
-    $siteheader.find('nav li.main').mouseenter(function() {
+    $siteheader.find('nav li.menu-item-has-children').mouseenter(function() {
         var $thisMegamenu = $(this).find('.megamenu');
-         var $thisMegamenuUL = $(this).find('ul.megamenu--sub-menu')
+         var $thisMegamenuUL = $(this).find('ul.sub-menu')
         // stop any leaveTimeouts if they were triggered through guick back-and-forth hovering
         clearTimeout(leaveTimeout);
         // 1.
@@ -209,7 +166,7 @@ $siteheader.find('nav li.main').hover(
         }, 200);
     });
     // Leaving li item (if another li is hovered over quickly after, this is cleared)
-    $siteheader.find('nav li.main').mouseleave(function() {
+    $siteheader.find('nav li.menu-item-has-children').mouseleave(function() {
       clearTimeout(hoverTimeout);
       leaveTimeout = setTimeout(function() {
         if( $megamenu.is(':visible') ) {
