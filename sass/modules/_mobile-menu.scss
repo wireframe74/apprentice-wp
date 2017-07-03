@@ -1,7 +1,7 @@
 .menu-button {
     display: none;
     position: absolute;
-    font-size: 35px;
+    font-size: 30px; 
     right: 14px;
     cursor: pointer;
     top: 20px;
@@ -15,12 +15,12 @@ top:6px;
 }
 
 
-@media screen and (max-width: 1100px) { 
+@media screen and (max-width: 991px) { 
 
 	.menu-button {
     display: inline-block;
-    top: -6px;
-    right: 25px;
+    top: -4px;
+    right: 20px;
     color: #fff
 
 	}
@@ -30,17 +30,37 @@ top:6px;
   color: #fff;
     top: 10px;
     font-size: 42px;
+    display:block;
     }
+
+
+
+
   }
 
 }
 
 
 
+   .close-btn{
+  color: #fff;
+    top: 10px;
+    font-size: 42px;
+    display:block;
+    right: 0;
+    position:absolute;
+
+      &:hover {
+        cursor:pointer;
+      }
+    }
+
+
 /*********************
 Responsive Menu
 *********************/
-.responsive-menu {
+.responsive-menu,
+.offcanvas-form {
   z-index:1011111111111;
   -ms-overflow-y: scroll;
   overflow-y: scroll;
@@ -62,18 +82,9 @@ Responsive Menu
   overflow: -moz-scrollbars-none;
   /* Plus Minus */
   /* End of Plus Minus*/
-}
 
-.responsive-menu::-webkit-scrollbar {
-  width: 0 !important;
-  display: none;
-}
 
-.responsive-menu nav {
-  padding: 5% 0;
-}
-
-.responsive-menu  .menu-item.home a {
+.menu-item.home a {
 background: url(../images/icons/home.svg) top left no-repeat;
     width: 17px;
     text-indent: -9999px;
@@ -85,91 +96,91 @@ background: url(../images/icons/home.svg) top left no-repeat;
     padding-bottom: 0;
 }
 
-.responsive-menu nav > ul > li > a:hover {
+ nav > ul > li > a:hover {
   color: #0188b2;
 }
 
-.responsive-menu ul {
+ ul {
   margin: 0;
   padding: 0;
 }
 
-.responsive-menu ul li {
+ ul li {
   float: left;
   width: 100%;
   margin-bottom: 0;
 
 }
 
-.responsive-menu ul li a {
+ ul li a {
   float: left;
   width: 100%;
   display: block;
 
 }
 
-.responsive-menu ul li:last-child {
+ ul li:last-child {
   border-bottom: none;
 }
 
 
-.responsive-menu .sub-menu li {
+ .sub-menu li {
   // border-bottom: 1px solid #f1f2f2;
 }
 
-.responsive-menu .sub-menu li a {
+ .sub-menu li a {
   text-transform: none;
   color:#ccc;
   @extend .body-copy;
 }
 
-.responsive-menu .sub-menu li a:hover {
+ .sub-menu li a:hover {
   color:#fff; 
 }
 
-.responsive-menu .menu-item-has-children {
+ .menu-item-has-children {
   position: relative;
 }
 
-.responsive-menu .has-details {
+ .has-details {
   right: 0;
   width: 47px;
   height: 47px;
   top: 0px;
 }
 
-.responsive-menu .has-details:after {
+ .has-details:after {
   right: 22px;
   top: 11px;
   width: 4px;
   height: 25px;
 }
 
-.responsive-menu .has-details:before {
+ .has-details:before {
   right: 11px;
   top: 21px;
   width: 25px;
   height: 4px;
 }
 
-.responsive-menu .show {
+ .show {
   background-color: #f1f2f2;
 }
 
-.responsive-menu .show:after {
+ .show:after {
   height: 0;
 }
 
-.responsive-menu ul.sub-menu {
+ ul.sub-menu {
   display: inline-block;
   width: 100%;
 }
 
-.responsive-menu .current-menu-item > a, .responsive-menu .current_page_ancestor > a {
+ .current-menu-item > a,  .current_page_ancestor > a {
   color: #FFF;
 }
 
-.responsive-menu .search {
+ .search {
   margin-top: 30px;
   border-top: 1px solid #0188b2;
   border-bottom: 1px solid #0188b2;
@@ -178,7 +189,7 @@ background: url(../images/icons/home.svg) top left no-repeat;
   float: left;
 }
 
-.responsive-menu .search input[type="text"] {
+ .search input[type="text"] {
   display: inline-block;
   padding-top: 13px;
   padding-bottom: 10px;
@@ -186,25 +197,25 @@ background: url(../images/icons/home.svg) top left no-repeat;
   text-transform: none;
 }
 
-.responsive-menu .search input[type="text"]::-webkit-input-placeholder {
+ .search input[type="text"]::-webkit-input-placeholder {
   color: #000;
 }
 
-.responsive-menu .search input[type="text"]:-moz-placeholder {
+ .search input[type="text"]:-moz-placeholder {
   /* Firefox 18- */
   color: #000;
 }
 
-.responsive-menu .search input[type="text"]::-moz-placeholder {
+ .search input[type="text"]::-moz-placeholder {
   /* Firefox 19+ */
   color: #000;
 }
 
-.responsive-menu .search input[type="text"]:-ms-input-placeholder {
+ .search input[type="text"]:-ms-input-placeholder {
   color: #000;
 }
 
-.responsive-menu .search button {
+ .search button {
   background-color: #303030;
   color: #FFF;
   float: right;
@@ -212,27 +223,70 @@ background: url(../images/icons/home.svg) top left no-repeat;
   padding: 12px 20px;
 }
 
-.responsive-menu .search button:hover {
+ .search button:hover {
   background-color: #171717;
 }
 
-.responsive-menu ul {
+ ul {
   list-style: none;
   margin: 10px 0 0 0;
   padding: 0;
   text-align:left;
 }
 
-.responsive-menu .head-button-area {
+ .head-button-area {
   display: none;
   margin-top: 37px;
   text-align: center;
 }
 
-.responsive-menu .head-button-area .but1 {
+ .head-button-area .but1 {
   margin-right: 0;
   margin-bottom: 8px;
 }
+
+nav {
+  padding: 5% 0;
+}
+
+
+
+
+}
+
+.responsive-menu::-webkit-scrollbar,
+.offcanvas-form::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body .aig-header  .responsive-menu .menu-button {
   font-size: 40px;
@@ -266,7 +320,9 @@ body .aig-header  .responsive-menu .menu-button {
 
 
 
-
+.offcanvas-form {
+  padding:20px;
+}
 
 
 
@@ -323,11 +379,12 @@ body .aig-header  .responsive-menu .menu-button {
   padding-right: 58px;
 
   color: white;
-  @extend .heading-font;
-  font-size: 18px;
+
+  font-size:1.1rem;
   font-weight: normal;
   line-height: 23px;
   text-decoration: none;
+  text-transform: uppercase;
 
 }
 .sm-blue a.current {
@@ -390,4 +447,34 @@ body .aig-header  .responsive-menu .menu-button {
 .sm-blue ul li:first-child {
   border-top: 0;
 }
+
+
+
+body.no-scroll #c-mask{
+width: 100%;
+height: 100%;
+opacity: .7;
+-webkit-transition: opacity .3s;
+transition: opacity .3s;
+}
+
+
+#c-mask {
+z-index: 100;
+top: 0;
+left: 0;
+width: 0;
+height: 0;
+background-color: #000;
+opacity: 0;
+-webkit-transition: opacity .3s,width 0s .3s,height 0s .3s;
+transition: opacity .3s,width 0s .3s,height 0s .3s;
+position: fixed;
+overflow: hidden;
+}
+
+
+
+
+
 

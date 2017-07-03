@@ -31,10 +31,26 @@
 
 
 
+@keyframes fadeWhite {
+  0% {
+    transform:opacity(0);
+  }
+  14.28% {
+    transform:opacity(25%);
+  }
+  85.71% {
+    transform:opacity(60%);
+  }
+  100% {
+    transform:opacity(100%);
+  }
+}
 
 
 .aig-header.change {
 
+
+	 background-color: #FFF;
 
 	#menu-main-menu li.menu-item.home a {
 		background: url(../images/icons/home-dark.svg) top left no-repeat;
@@ -44,13 +60,14 @@
 
 
 
-	 z-index: 1000000000;
-	 background: #fff;
-    -webkit-transition: margin .3s ease-out 0s;
-    -moz-transition: margin .3s ease-out 0s;
-    -ms-transition: margin .3s ease-out 0s;
-    -o-transition: margin .3s ease-out 0s;
-    transition: margin .3s ease-out 0s;
+	 z-index: 99;
+
+	   animation: fadeWhite 0.5s;
+//     -webkit-transition: margin .3s ease-out 0s;
+//     -moz-transition: margin .3s ease-out 0s;
+//     -ms-transition: margin .3s ease-out 0s;
+//     -o-transition: margin .3s ease-out 0s;
+//     transition: margin .3s ease-out 0s;
 
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2), 0 0 10px 1px rgba(255, 255, 255, .2);
     position: fixed;
@@ -106,13 +123,15 @@
 	}
 
 
-}
+} 
 
 // ORANGE BG
 
 .reversed {
 
-
+	&:before {
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 100%);
+	}
 
 	.aig-logo.aig-logo--white {
 		@extend .aig-logo--white
@@ -141,4 +160,5 @@
 
 
 }
+
 

@@ -67,7 +67,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
           
   echo' 
 
-  <div id="rightcolumn">';?> 
+  <div id="rightcolumn" class="col-md-3">';?> 
 
   <?php  include(TEMPLATEPATH . '/page-furniture/featuredjobs.php'); ?>
 			 

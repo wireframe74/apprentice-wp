@@ -60,7 +60,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
            
   echo'</div> 
   
-   <div id="rightcolumn">';
+   <div id="rightcolumn" class="col-md-3">';
 
   get_sidebar( '' );  
  

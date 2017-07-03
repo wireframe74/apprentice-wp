@@ -38,6 +38,29 @@ class WPSE_78121_Sublevel_Walker extends Walker_Nav_Menu
 
 
 
+
+/**
+ * My extended menu walker
+ * Supports separators as "ex_separator" arg to wp_nav_menu call
+ */
+class MyExtendedMenuWalker extends Walker_Nav_Menu {
+
+	private $counter = 0;
+
+    /**
+     * Starting an element
+     * If this is not the first, add separator here
+     */
+    function start_el(&$output, $item, $depth, $args) {
+
+        if($this->counter && isset($args->ex_separator))
+        	$output .= $args->ex_separator;
+        parent::start_el($output, $item, $depth, $args);
+		$this->counter ++;
+    }
+
+}
+
 function custom_length_excerpt($word_count_limit) {
     $content = wp_strip_all_tags(get_the_content() , true );
     echo wp_trim_words($content, $word_count_limit);
@@ -1557,7 +1580,7 @@ function html5blank_styles()
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '1.0', 'all');
     wp_enqueue_style('bootstrap'); // Enqueue it!
 
-    wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab', array(), '1.0', 'all');
+    wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400', array(), '1.0', 'all');
     wp_enqueue_style('google-fonts');
 
 

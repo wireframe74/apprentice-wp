@@ -59,3 +59,153 @@
 
 
 
+
+
+
+				
+#sticky-footer.dark {
+position:fixed;
+bottom:0;
+width:100%;
+z-index:10;
+
+.form-inline {
+	margin-left:10px
+}
+.form-control {
+ margin: 10px 0;
+    background: transparent;
+    border: 1px solid #666;
+    border-radius: 50px;
+    margin:2px;
+}
+
+.btn {
+	 border-radius: 50px;
+	 background-color:$primary-color;
+	 border:none;
+	 color:#fff;	
+	 font-size:1.1rem;
+	 min-width:180px;
+}
+
+	 h3 {
+	 	font-size: 1.2rem;
+	    font-weight: normal;
+	        line-height: 1rem;
+    margin: 13px 0 0 13px;
+	 }
+
+
+	h3,
+	p {
+		color: #fbfbfb;
+		display: inline-block;
+		float: left;
+	}
+
+
+}
+
+
+
+
+  #copyrights p {
+    font-size: 14px;
+    margin: 0;
+   padding-top: 5px;
+   line-height:1em;
+
+
+   @media all and (min-width:1px) and (max-width:650px) {
+   padding-top: 10px;
+     }
+   
+   
+  }
+
+  #sticky-footer.dark, 
+ {
+      background-color: darken($dark-grey,10%);
+      color: #FFF;
+      border: none;
+      overflow:visible;
+      display:block;
+      height:75px;
+
+}
+
+
+  .dark #copyrights {
+    // background-color:#221b44 ;
+    color: #FFF;
+    text-shadow: none;
+
+ 
+    padding:20px 0;
+  }
+
+
+.footer {
+  min-width: 200px;
+  text-align: center;
+}
+
+.copyright span, .copyright a { margin: 0 10px; }
+
+
+body.show-nav #sticky-footer.dark{
+  display: none
+}
+
+
+
+
+
+.sticky-footer {
+
+	
+
+
+
+
+	&--row {
+
+
+	> * {
+
+			display: inline-block;
+			float: left;
+			margin-right: 20px;
+		}
+
+
+	}
+
+	&--icon {
+	margin:0 0 0 0
+	}
+
+	&--text {
+		margin:15px 0 0 0
+	}
+
+	&--btn {
+		margin: 10px 0 0 20px;
+	}
+
+
+
+		&--close-btn {
+			color: #fff;
+		    width: 100px;
+		    font-size: 23px;
+		    float: right;
+		    text-align: right;
+		}
+
+
+
+
+
+}

@@ -1,10 +1,12 @@
 .get-in-touch {
 
 	background-image: url(../images/footer-img-right.jpg);
-    background-size: auto 100%;
+//     background-size: auto 100%;
     background-position: right;
     background-color: #1c2227;
         background-repeat: no-repeat;
+
+  background-size: cover;
 
 
 }
@@ -21,10 +23,10 @@
 	}
 
 	&--text {
-		font-size: 1rem;
+		font-size: 1.2rem;
 		margin: 30px 0;
-		color:#b6b6b6;
-		line-height:1.3rem;
+		color:#fff;
+		line-height:1.5rem;
 
 	}
 

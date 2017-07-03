@@ -32,7 +32,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
  
   echo'</div> ';
   
-  echo'<div class="postCollapse employers">';
+  echo'<div class="postCollapse employers col-xs-12 col-md-6">';
             // the_loop begin
            
 			echo'<section>';
@@ -53,7 +53,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
           
   echo' 
 
-   <div id="rightcolumn">';
+   <div id="rightcolumn" class="col-xs-12 col-md-6">';
 // include(TEMPLATEPATH . '/page-furniture/employernews.php');
   get_sidebar( '' );  
  

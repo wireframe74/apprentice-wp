@@ -19,27 +19,18 @@ get_header();
 echo'<div id="aigwd-maincontentcontainer" class="row">';
              
             // the_loop begin
-            if (have_posts()) : while (have_posts()) : the_post();
+            if (have_posts()) : while (have_posts()) : the_post(); ?>
   
-  echo'<div class="apprenticescontainer">  
-   
-  <div id="newscolumn" class="internalcolumn col-xs-12 col-md-3"> ';
-     	       // LEFT HAND NAVIGATION  
-	wp_nav_menu(array(
-		'theme_location' => 'secondary_menu', // menu slug from step 1
-		'container' => false, // 'div' container will not be added
-		'menu_class' => 'nav', // <ul class="nav"> 
-		'fallback_cb' => 'default_header_nav', // name of default function from step 2
-	));
- 
-  echo'</div> ';
-  
-  echo'<div class="postCollapse apprentices col-xs-12  col-sm-6">';
+
+
+<?php  echo'<div class="postCollapse apprentices col-md-6">';
             // the_loop begin
            
 			echo'<section>';
      
 	  echo' <a id="top" class="scroll"></a>';?>
+
+    <h2><?php the_title(); ?></h2>
 <?php the_content();?>
 <?php include(TEMPLATEPATH . '/page-furniture/jump.php');   ?>
 <?php	echo' </section>';

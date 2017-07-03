@@ -11,7 +11,7 @@
         <div class="item item-sm">
         <h4 class="item--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
         <p><?php echo do_shortcode (get_post_meta($post->ID, 'sh_location', true));  ?></p>
-     <p><?php custom_length_excerpt(50); ?></p>
+     <p class="truncate"><?php custom_length_excerpt(50); ?></p>
          <a class="aig-btn aig-btn__small"  href="<?php the_permalink(); ?>" role="button">Discover More</a>
         </div>
 

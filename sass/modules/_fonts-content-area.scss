@@ -12,12 +12,12 @@
 
 
 .backtotopscroll {
-border-bottom: 3px solid $dark-grey;
+border-bottom: 2px solid $dark-grey;
 padding: 10px 0;
 width: 100%;
 position: relative;
 box-sizing: border-box;
-margin: 2em 0 4em;
+margin: 2em 0 3em;
 text-transform: uppercase;
 font-size: .8rem;
     a {
@@ -49,7 +49,7 @@ font-size: .8rem;
             margin:0!important;
         
             a {
-                @extend .heading-font;
+                // @extend .heading-font;
                 border-bottom: 2px solid #333e47;
                 padding: 15px;
                 width: 100%;
@@ -74,3 +74,44 @@ font-size: .8rem;
 
 
 
+
+// blockquote {
+//     width: 100%;
+//     margin: 0 0 30px;
+//     display: inline-block;
+//     position: relative;
+//     height: auto;
+//     background-color: $dark-grey;
+//     padding: 2.3em;
+//     text-align: left;
+//     line-height: 1.5em;
+//     border-left:none;
+
+//     p {
+//          color:#fff;
+//          @extend .heading-font;
+//          text-decoration:underline;
+//              font-size: 1.3rem;
+//     line-height: 1.5;
+//     }
+
+//     + p {
+//            @extend .heading-font;
+        
+//              font-size: 1.3rem;
+//     line-height: 1.5;
+//     }
+
+//     &:after {
+//     content: ' ';
+//     position: absolute;
+//     width: 0;
+//     height: 0;
+//     left: 0px;
+//     right: auto;
+//     top: auto;
+//     bottom: -20px;
+//     border: 22px solid;
+//     border-color: transparent transparent transparent $dark-grey;
+//     }
+// }

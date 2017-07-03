@@ -55,7 +55,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
             endif; 
 			echo'</div>
    
- <div id="rightcolumn">';
+ <div id="rightcolumn" class="col-md-3">';
  include(TEMPLATEPATH . '/page-furniture/findaspecialist.php'); 
  include(TEMPLATEPATH . '/page-furniture/makeanenquiry.php');
  include(TEMPLATEPATH . '/page-furniture/relatedpublications.php');

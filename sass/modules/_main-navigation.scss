@@ -2,7 +2,7 @@
  
  nav { position: relative;  }
 
- nav > ul.container {  position:static; z-index:10000; padding:6px 0 0 160px; text-align:left;}
+ nav > ul.container {  position:static; z-index:10000; padding:6px 0 0 170px; text-align:left;}
  li.menu-item  { display:inline-block;  z-index:10000 }
 
  nav li.li.menu-item > a {  
@@ -67,7 +67,7 @@ padding: 26px 12px;
 margin: 0 1px;
 font-size: 1rem;
 text-transform: uppercase;
-line-height: 2;
+line-height: 2.1; 
 color:#fff;
 text-decoration: none;
 z-index: 100000;
@@ -110,7 +110,7 @@ position: absolute;
 top: 0;
 left: 0;
 width: 100%;
-padding: 7em 0;
+padding: 6.7em 0 7em 0;
 height: 270px;
 overflow: hidden;
 background-color:$primary-color; 
@@ -125,19 +125,20 @@ padding: 10px;
 
 
 ul.sub-menu > li > a  {
-color:#fcebe6;
+color:#fff;
 font-size:1rem; 
-    padding: 10px 20px;
+    padding: 10px 13px;
     border-radius: 50px;
     text-decoration:none;
-        border: 1px solid $primary-color;
-/*     transition:all .5s; */
+        border: 1px solid transparent;
+        transition: all .2s;
+/*     transition:all .5s; */ 
 
     &:hover {
 /*     	background:rgba(0,0,0,.07); */
 /*     	background-color:white; */
-/*     	color:$primary-color; */
-    border: 1px solid rgba(255,255,255,.5);
+    	color:#fff;
+    border: 1px solid #fff;
     }
 
 }

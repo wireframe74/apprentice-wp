@@ -9,11 +9,11 @@
                 	<div class="wpjbx-jobname" style="width:70%;"><a href="';the_permalink();echo'">';the_title();echo'</a></div> 
 					 
          			<div class="wpjbx-city" >';echo do_shortcode (get_post_meta($post->ID, 'sh_location', true)); echo'</div> 
- 					 <div class="wpjbx-description" style="color:#333;margin-top:6px;">'; echo '<p>'; echo excerpt(25); echo' <a href="';the_permalink();echo'"><strong>Find out more</strong></a></p> </div> 
+ 					 <div class="wpjbx-description" style="color:#333;margin-top:6px;">'; echo '<p class="truncate">'; echo excerpt(16); echo' <a href="';the_permalink();echo'"><strong>Find out more</strong></a></p> </div> 
             	</div>
         </div>   ';  endwhile;  wp_reset_query(); ?>
 		
-                <div class="">
+                <div class=""> 
             <div class="wpjb-col-100">
                 <span class="wpjb-widget-grid-link wpjb-widget-recent-jobs-all">           
                     <a class="wpjb-link-view-all" href="/all-jobs/">See more career opportunities</a>

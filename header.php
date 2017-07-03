@@ -12,12 +12,8 @@
 <meta charset="<?php bloginfo('charset'); ?>">
 <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 <?php wp_head(); ?>
-
-
-
-
 
 
 
@@ -30,6 +26,7 @@
 </script>
 <!--<script src="/wp-content/plugins/image-slider-responsive/js/jquery.flexslider-min.js" type="text/javascript"></script>-->
 <script type="text/javascript">
+
   jQuery(document).ready(function($) {
     $(".scroll").click(function(event) {
     event.preventDefault();
@@ -43,6 +40,8 @@
 
 
 <!-- <script src="<?php // bloginfo('template_directory' ); ?>/js/dw_glidescroll.js" type="text/javascript"></script> -->
+
+
 
 
 <script type="text/javascript">
@@ -67,7 +66,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="<?php // bloginfo('template_directory' ); ?>/css/accordian.css"> -->
 
 <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'> -->
-<script type="text/javascript" src="<?php bloginfo('template_directory' ); ?>/js/jquery.placeholder.min.js"></script>
+<!-- <script type="text/javascript" src="<?php// bloginfo('template_directory' ); ?>/js/jquery.placeholder.min.js"></script> -->
 <!-- <script type="text/javascript" src="<?php // bloginfo('template_directory' ); ?>/js/fixed.js"></script> -->
 
  
@@ -85,7 +84,21 @@ form input {
 }
  </style>
 <![endif]-->
+
+
+<style>.wow { visibility: hidden; }</style>
+
+
+
+
+
+
+
+    
 </head><body <?php body_class();?>>
+
+
+
 <div id="preloader"></div>
 <!-- OVERALL CONTAINER TAG --><div id="full">
 
@@ -107,7 +120,15 @@ form input {
  </nav>
 </section>
 
-
+<section id="form-contact" class="offcanvas-form">
+<div class="close-btn">×</div>
+<div class="row">
+  <div class="col-xs-12">
+      <?php gravity_form( 1, $display_title = false,  $display_inactive = false, $field_values = null, $ajax = true, $tabindex, $echo = true );
+  ?>
+  </div>
+</div>
+</section>
 
 
 <header class="aig-header sticky-aig-header scrolling clearfix " id="aig-header" role="banner">
@@ -137,7 +158,7 @@ form input {
           <li><a href="<?php bloginfo('url'); ?>/policies/">Policies</a></li>
           <li><a href="<?php bloginfo('url'); ?>/contact/">Contact</a></li>
           <li class="header-icon header-icon__facebook"><a target="_blank" href="https://www.facebook.com/AiGroupATC/"></a></li>
-          <li class="header-icon header-icon__search"><a href="#search"></a></li>
+          <li class="header-icon header-icon__search"><a class="full-form" href="#search"></a></li>
           </ul>
         </div><!-- header-buttons -->
     </div><!-- menu-global container -->
@@ -202,35 +223,27 @@ wp_nav_menu( array(
 <!-- PUSH DOWN CONTENT DIV -->
 <div id="pagecontent">
 
-  <section class="hero-container autoplay-video__hero">
-        <div class="hero hero-video dark-bg">
-          <div class="container hero__container">
-            <div class="row hero__row">
-              <div class="col-lg-6 col-md-6 col-sm-12 center">
-                <h1 class="aig-heading hero--headline">The right job helps you create the future you want.</h1>
-                  <p class="hero--paragraph">AI Group Recruitment Services - Building Tomorrow's Workforce</p>
-                  <div class="clearfix"></div><a class="aig-btn aig-btn__reversed hero--btn"  href="#" role="button">Sign Up Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-   </section>
+
+<?php include(TEMPLATEPATH . '/page-furniture/page-header.php');  ?>
 
 
-    <section id="breadcrumb">
-        <div class="container">
-        <div class="row">
-        <div class="col-xs-12">
-            <ul>
-            <li class="breadcrumb--first"><a href="#">Home</a> </li>
-            <li><a href="#">Employers</a> </li>
-            <li>Apprentice Training</li>
-            </ul>
-        </div>
-        </div>
-        </div>
-    </section>
+<?php if(!is_front_page()): ?>
 
+  <section id="breadcrumb">
+  <div class="container">
+  <div class="row">
 
+    <div class="breadcrumbs fleft col-xs-12" typeof="BreadcrumbList" vocab="http://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+    bcn_display();
+    }?>
+    </div>
+
+  </div>
+  </div>
+  </section>
+
+<?php endif; ?>
 
 <div id="maincontentwrapper" class="content <?php if(!is_front_page()) :?>container<?php endif; ?>">

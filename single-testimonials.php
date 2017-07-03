@@ -31,7 +31,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
             // anything after the loop?
             endwhile;  endif;  
   	echo'</div> 
-   		<div id="rightcolumn">';
+   		<div id="rightcolumn" class="col-md-3">';
 		get_sidebar( '' );  
    		echo'</div>'; 	
 	echo '</div>';

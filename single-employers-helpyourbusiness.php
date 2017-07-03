@@ -32,7 +32,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
  
   echo'</div> ';
   
-  echo'<div class="postCollapse employers">';
+  echo'<div class="postCollapse employers col-xs-12 col-md-6">';
             // the_loop begin
            
 			echo'<section>';
@@ -57,7 +57,7 @@ echo'</section></div>';
           
   echo' 
 
-   <div id="rightcolumn">';
+   <div id="rightcolumn" class="col-xs-12 col-md-6">';
 
   get_sidebar( '' );  
  

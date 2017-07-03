@@ -7,6 +7,21 @@ body {
 }
 
 
+@media (min-width: 1150px) {
+
+	.container {
+	width: 1170px;
+	}
+
+
+
+}
+
+
+
+.transparent {
+	background-color: transparent;
+}
 .postCollapse {
 	@media (max-width:991px) {
 		clear: both;
@@ -18,8 +33,18 @@ body {
 }
 
 
+.iframe-apply {
+width: 100%;
+}
+
+
+
+
+
 #aigwd-maincontentcontainer {
 	padding-top: 60px;
+	    z-index: 1;
+    position: relative;
 }
  
 .postCollapse img {
@@ -31,27 +56,26 @@ body {
 	border-bottom: 4px solid  $light-grey;
 	padding: 10px 0;
 
-
-	.breadcrumb--first a {
+ 
+	span:first-child a { 
 		text-indent: -99999px;
-		display: block;
-		background: url(../images/home-sml.svg) top left no-repeat;
+		display: inline-block;
+		background: url(../images/home-sml.svg) top 2px left no-repeat;
 		width: 14px;
+		float:left;
 /* 		height: 13px; */
 	}
 
 
-	ul {
-		margin: 0; padding: 0;
-	}
+	
 
-	li {
+	span {
 	display: inline-block;
     font-size: .9rem;
     color: #444;
     margin-bottom: 0;
     float: left;
-    margin: 0 10px 0 0;
+    margin: 1px 10px 0 0;
 	}
 
 	a {
@@ -64,6 +88,10 @@ body {
 
 .widget {
 	margin: 30px 0;
+
+	&:first-child {
+		margin-top:0;
+	}
 }
 
 
@@ -123,6 +151,7 @@ position: absolute;
 width: 100%;
 padding-top: 18px;
 z-index: 2;
+transition: background-color .2s;
 }
 
 
@@ -158,6 +187,30 @@ z-index: 2;
 
 .section {
 	padding: 80px 0;
+
+	h2 {
+		margin-bottom:20px;
+	}
+
+	p {
+		font-size:1.1rem;
+	}
+
+	&__orange-bg {
+		text-align:center;
+		padding:40px 0 60px;
+		
+		background-color:$primary-color;
+
+		> * {
+			color:#fff;
+		}
+
+		.aig-btn {
+			margin:0 auto;
+			@extend .heading-font;
+		}
+	}
 
 	@media (max-width:991px) {
 		padding: 40px 0;
@@ -237,3 +290,4 @@ margin-top: 40px;
 .tright {
 	text-align: right;
 }
+

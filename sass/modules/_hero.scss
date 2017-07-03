@@ -21,7 +21,7 @@
 		overflow: hidden
 	}
 	.hero {
-		padding: 132px 0 60px;
+		// padding: 132px 0 60px;
 		text-align: left;
 		height: 475px; 
 
@@ -55,6 +55,23 @@
 		
 			}
 	}
+
+
+	.hero {
+
+			&--abstract-bg {
+			position: absolute;
+			width: 36%;
+			height: auto;
+			position: absolute;
+			right: 96px;
+			bottom: -266px;
+			opacity: .8;
+			}
+	}
+
+
+	
 	.hero .hero--paragraph {
 		padding-top: 10px;
 		padding-bottom: 0;
@@ -79,11 +96,13 @@
 }
 
 .hero {
-	background-image: url("../images/header.jpg");
-	background-position: 70% center;
-	background-size: cover;
+// 	background-image: url("../images/header.jpg");
+// 	background-position: 70% center;
+// background-attachment: fixed;
+	background-size: cover; 
 	text-align: left;
-	position: relative
+	position: relative;
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7),url("../images/header.jpg") )
 }
 @media (max-width:767px) {
 	.hero {
@@ -141,3 +160,8 @@
 		max-width: 100% 
 	}
 }
+
+// .second,
+// .third {
+// 	visibility: hidden
+// }

@@ -34,7 +34,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
            
    echo'</div> 
   
-   <div id="rightcolumn">';?>
+   <div id="rightcolumn" class="col-md-3">';?>
  <h1 style="border-bottom:1px solid #1a1a1a;padding-bottom:10px!important;margin-top:10px!important;">National Management</h1>
 
 <?php 

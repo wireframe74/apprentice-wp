@@ -33,15 +33,17 @@
                 transition: all ease 0.4s; 
                 border: 0;
                 font-weight:normal;
+                -webkit-backface-visibility: hidden;
+                -webkit-transform-style: preserve-3d;
 
                  &:hover {
  
                     box-shadow: inset 340px 0 0 0 $primary-color;
                     color:#fff;
 
-                    @media (max-width:991px) {
-                   box-shadow: inset 767px 0 0 0 $primary-color;    
-                    }
+//                     @media (max-width:991px) {
+//                    box-shadow: inset 767px 0 0 0 $primary-color;    
+//                     }
                 }
             }
 
