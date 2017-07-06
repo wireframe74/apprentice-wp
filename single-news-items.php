@@ -40,8 +40,9 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
 	  echo' <a id="top" class="scroll"></a>';
 	  
 	  ?>
-<?php  
- echo '<h1>';the_title();echo'</h1>';
+
+       <h1 class="page-title"><?php the_title(); ?></h1>
+<?php 
  the_content();
  
    

@@ -27,6 +27,15 @@
   font-size:1rem;
   }
 
+    h4 a {
+      font-size: 1rem;
+   @extend .heading-font;
+    text-transform:none;
+    font-weight:bold;
+    }
+   
+
+
 }
 
 .item {
@@ -35,13 +44,19 @@
 
   .aig-btn {
     margin-top:20px;
+    @media (max-width:550px) {
+      max-width:none;
+      width:100%
+    }
 
   }
 
   h4 {
-    text-transform:none;
+   a { text-transform:uppercase;}
     // @extend .heading-font;
     font-weight:normal;
+
+    line-height:1.3rem;
   }
 
 p {
@@ -98,11 +113,19 @@ p {
     opacity: 1;
     left: -18px;
     background-color:$purple;
+
+    @media (max-width:767px) {
+      left:0;
+    }
 }
 
 .owl-theme  .owl-nav .owl-next {
     left: auto;
     right: -18px;
+
+     @media (max-width:767px) {
+      right:0;
+    }
 }
 
 .owl-theme  .owl-nav .owl-prev {

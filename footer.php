@@ -8,6 +8,70 @@
   <a  data-wow-delay="1.2s" class="tcenter aig-btn aig-btn__reversed  form-button wow fadeInUp" href="" role="button">Register Today</a>
 </section> -->
 
+<?php if ( is_singular( 'aboutus' ) )  :?>
+
+<div class="clearfix"></div>
+
+<section class="quicklinks section section-reversed section-reversed__purple">
+<div class="container">
+<div class="row">
+
+<div class="col-xs-12">
+    <h2 class="nomnargin__top bottommargin wow fadeInUp tcenter">Our Methodology</h2>
+</div>
+
+
+
+
+
+<div class="clearfix">
+
+        <div class="col-xs-6 col-sm-4  wow fadeInUp" data-wow-delay=".2s">
+        <div class="icon-widget icon-widget__sm">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_1_white.svg" alt="Looking for an Apprentice?">  
+        <h4>Selection Process</h4>
+        <p>We thoroughly assess motivations, aptitude and discipline.</p>
+        
+        </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-4  wow fadeInUp" data-wow-delay=".5s">
+        <div class="icon-widget icon-widget__sm">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_2_white.svg" alt="The Apprentice Tool Kit">  
+        <h4>Data Matching</h4>
+        <p>We match an apprentice’s capabilities and career goals both to your business and to your industry sector.</p>
+    
+        </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-4  wow fadeInUp" data-wow-delay=".8s">
+        <div class="icon-widget icon-widget__sm">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_3_white.svg" alt="Looking to upskill your workforce?">  
+        <h4>High Quaility Training</h4>
+        <p>We survey each candidate’s teachers in detail wherever possible to understand how motivated and disciplined they are and how well they work with their peers.</p>
+      
+        </div>
+        </div>
+
+
+      
+        </div>
+        </div>
+
+</div><!-- section -->
+
+
+</div>
+
+</div>
+
+</section>
+
+<?php endif; ?>
+
+
 <footer id="sticky-footer" class="dark">
 <div id="copyrights">
 <div class="container-fluid clearfix">
@@ -25,7 +89,7 @@
 <h3 class="sticky-footer--text">Job Feed Subscription<!-- <span>Subscribe &amp; receive daily job updates. </span> --></h3> 
 
 
-
+<div class="owl-next" style="display: none"><i class="icon-angle-right"></i></div>
 
 <form class="form-inline">
   <div class="form-group">
@@ -67,9 +131,9 @@
 <div class="container">
 <div class="row">
       <div class="col-md-6 pull-left">
-          <h4 class="section-bg--title animated fadeInUp" >Have any Questions?</h4>
-          <p class="section-bg--text wow fadeInUp second">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis lobortis orci vel pharetra. Vivamus quis ligula tortor. Suspendisse quis vestibulum nunc. Aliquam</p>
-          <a class="aig-btn section-bg--btn aig-btn__reversed wow fadeInUp third"  href="#contact-form"  role="button">Speak to a Consultant</a>
+          <h4 class="section-bg--title wow fadeInUp" >Make an Enquiry</h4>
+          <p class="section-bg--text wow fadeInUp" data-wow-delay=".2s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis lobortis orci vel pharetra. Vivamus quis ligula tortor. Suspendisse quis vestibulum nunc. Aliquam</p>
+          <a class="aig-btn section-bg--btn aig-btn__reversed wow fadeInUp"  data-wow-delay=".6s" href="#contact-form"  role="button">Speak to a Consultant</a>
 
 
 
@@ -131,21 +195,24 @@
 
 
 <div id="search" class="form-bg-full-width">
-<button type="button" class="close-button"></button>
+
+    <button type="button" class="close-button"></button>
 
 
-<form  action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get">
-<input  data-wow-delay="0.5s" type="search" value="" name="s" id="s" placeholder="type keyword(s) here" . $onfocus . $onblur .' />
- <input type="submit" data-wow-delay="0.1s" class="btn btn-primary aig-btn aig-btn__reversed hero--btn"  id="searchsubmit" value="Search" />
+      <form  action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get">
+      <input  data-wow-delay="0.5s" type="search" value="" name="s" id="s" placeholder="type keyword(s) here" . $onfocus . $onblur .' />
+      <input type="submit" data-wow-delay="2s" class="btn btn-primary aig-btn aig-btn__reversed hero--btn"  id="searchsubmit" value="Search" />
+      </form>
 
-</form>
 
 </div>
 
 
-<div id="contact-form" class="form-bg-full-width">
+<div id="contact-form" class="form-bg-full-width form-wrapper">
 <button type="button" class="close-button"></button>
 <div class="container">
+
+    <h2>Online Enquiry</h2>
   <?php gravity_form( 1, $display_title = false,  $display_inactive = false, $field_values = null, $ajax = true, $tabindex, $echo = true ); ?>
 </div>
 </div>

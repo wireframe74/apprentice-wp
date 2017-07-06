@@ -39,11 +39,19 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
      
 	  echo' <a id="top" class="scroll"></a>';
 	  
-	  ?>
-<?php include(TEMPLATEPATH . '/page-furniture/faqs.php');
+	  ?> <?php 
 
-echo '<div id="videocontent">';
-the_content();
+echo '<div id="videocontent">'; ?>
+
+   <h1 class="page-title"><?php the_title(); ?></h1>
+
+  <div class="bottommargin">
+     <?php include(TEMPLATEPATH . '/page-furniture/faqs.php'); ?>
+  </div>
+
+<?php the_content(); ?>
+
+<?php
 echo '</div>'; 
 
 echo '<div id="casestudies">';
@@ -57,7 +65,7 @@ echo'</section></div>';
           
   echo' 
 
-   <div id="rightcolumn" class="col-xs-12 col-md-6">';
+   <div id="rightcolumn" class="col-xs-12 col-md-3">';
 
   get_sidebar( '' );  
  

@@ -2,7 +2,7 @@
  
  nav { position: relative;  }
 
- nav > ul.container {  position:static; z-index:10000; padding:6px 0 0 170px; text-align:left;}
+ nav > ul.container {  position:static; z-index:10000; padding:6px 0 0 194px; text-align:left;}
  li.menu-item  { display:inline-block;  z-index:10000 }
 
  nav li.li.menu-item > a {  
@@ -72,6 +72,11 @@ color:#fff;
 text-decoration: none;
 z-index: 100000;
 position: relative;
+font-weight:600;
+
+@media (min-width:991px) and (max-width:1150px) {
+    font-size:13px;
+}
 
 
     &:hover {
@@ -133,6 +138,11 @@ font-size:1rem;
         border: 1px solid transparent;
         transition: all .2s;
 /*     transition:all .5s; */ 
+
+@media (min-width:991px) and (max-width:1150px) {
+    font-size:13px;
+}
+
 
     &:hover {
 /*     	background:rgba(0,0,0,.07); */

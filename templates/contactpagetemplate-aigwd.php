@@ -9,57 +9,55 @@ get_header();
  ?><?php include(TEMPLATEPATH . '/page-furniture/jobslider.php'); ?>
 		 
 	  
-<?php 
-echo'<div id="aigwd-maincontentcontainer" class="row">';
+<div id="aigwd-maincontentcontainer" class="row">
              
-            // the_loop begin
-            if (have_posts()) : while (have_posts()) : the_post();
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   
-  echo'<div class="apprenticescontainer">';
-  
-  echo'<div class="postCollapse contactpage">';
-            // the_loop begin
-           
-			echo'<section>';
-     
-	  ?>
-       <h1 style="border-bottom:1px solid #1a1a1a;padding-bottom:10px!important;">Contact Us</h1>
+
+<?php endwhile;  endif;   ?>
+
+<div class="apprenticescontainer">
+<div class="postCollapse contactpage col-md-9">
+
 <?php the_content();?>
 
-	 <?php include(TEMPLATEPATH . '/page-furniture/statemanagement.php');?>
-<?php	echo' </section>';
-  
-            // anything after the loop?
-            endwhile;  endif;  
-           
-   echo'</div> 
-  
-   <div id="rightcolumn" class="col-md-3">';?>
- <h1 style="border-bottom:1px solid #1a1a1a;padding-bottom:10px!important;margin-top:10px!important;">National Management</h1>
 
-<?php 
-// METRO CONTENT
-	
- query_posts( array( 'post_type' => 'nationalcontactinfo',
-			 'taxonomy'  => 'national-management-contact-category','posts_per_page' => -1,'orderby' => 'menu_order','order' => 'ASC'));  while (have_posts()) : the_post();   
-    
-	echo '<div class="nationaloffice">';
-	echo'<h3 class="officename">';the_title();echo'</h3>';
-     echo '<p class="officecontent"';the_content();echo'</p>';
-	
-	echo '</div>';
-	 
-    endwhile;  wp_reset_query();?>
+<?php include(TEMPLATEPATH . '/page-furniture/statemanagement.php');?>
+</div>
+  
 
- 
+
+<div id="rightcolumn" class="col-md-3">
+    <h2>National Management</h2>
+
+
+          <?php query_posts( array( 'post_type' => 'nationalcontactinfo',
+         'taxonomy'  => 'national-management-contact-category','posts_per_page' => -1,'orderby' => 'menu_order','order' => 'ASC'));  while (have_posts()) : the_post();   
+       
+          ?>
+
+          <div class="stateoffice">
+          <h4><?php  the_title(); ?></h4>
+          <p class="officecontent"><?php the_content(); ?></p>
+          </div>
+
+
+          <?php  endwhile;  wp_reset_query();  ?>
+
 
 
 
   
-  <?php echo '</div>'; 	   
-   echo '</div>';
-   echo '</div>';
-     
+</div>
+<!-- rightcolumn -->
+
+
+</div><!-- apprenticescontainer -->
+</div><!-- aigwd-maincontentcontainer -->
+
+
+
+
   
 
- get_footer(); ?>
+ <?php get_footer(); ?>

@@ -4,14 +4,19 @@
 <div class="row">
   
 
+<?php if(!is_front_page()) :?>
 
-<div class="col-sm-12 bottommargin__sm">
+<!-- <div class="col-sm-12 bottommargin__sm">
   <h4 class="pull-left">Apprentice &amp; Trainee Career Jobs</h4>
-  <a class="aig-btn aig-btn__small pull-right" href="<?php bloginfo('url' ); ?>/all-jobs/" role="button">View all Jobs</a>
+  <a class="aig-btn aig-btn__small pull-right" href="<?php // bloginfo('url' ); ?>/all-jobs/" role="button">View all Jobs</a>
 </div>
-
+ -->
 
 <div class="clearfix"></div>
+
+<?php endif; ?>
+
+
     <div class="col-sm-12">
     <div class="owl-carousel owl-theme topmargin__sm">
 

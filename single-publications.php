@@ -15,7 +15,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
  
  // the_loop begin
             if (have_posts()) : while (have_posts()) : the_post();
-			echo'<div class="postCollapse internal" style="width:690px!important;margin-left:0px!important;">
+			echo'<div class="postCollapse internal col-md-9" >
     <section ';post_class('post'); 
 	echo'style="width:690px!important;">
       <div class="entry" > ';

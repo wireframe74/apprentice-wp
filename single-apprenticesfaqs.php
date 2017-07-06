@@ -35,9 +35,11 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
            
 			echo'<section>';
      
-	  echo' <a id="top" class="scroll"></a>';
+	  echo' <a id="top" class="scroll"></a>'; ?>
+
+       <h1 class="page-title"><?php the_title(); ?></h1>
 	  
-	  the_content();?>
+	 <?php the_content();?>
 <?php include(TEMPLATEPATH . '/page-furniture/faqs.php'); echo'</section></div>';
 
   

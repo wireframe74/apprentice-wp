@@ -11,6 +11,10 @@ get_header();?>
 
 
 
+<div class="clearfix"></div>
+
+
+
 
 
 <!-- INTRO  -->
@@ -18,9 +22,13 @@ get_header();?>
 <div class="container">
 <div class="row tcenter">
 
-<div class="col-md-8 col-md-offset-2 wow fadeInUp"><h2 class="nomnargin__top wow fadeInUp" data-wow-delay=".5s">Your partner in productivity</h2>
+<div class="col-md-8 col-md-offset-2 wow fadeInUp"><h2 class="nomnargin__top wow fadeInUp" data-wow-delay=".2s">Your partner in productivity</h2>
 
-<p>Ai Group Apprentice and Trainee Centre is part of a national system with over 35,000 apprentices and trainees in wide and varied trades and employment. We place apprentices and trainees with host organisations across all states and territories, and are a proud partner to more than 200 host organisations including some of Australia’s leading organisations</p></div>
+<p class="wow fadeInUp" data-wow-delay=".5s"">Ai Group Apprentice and Trainee Centre is part of a national system with over 35,000 apprentices and trainees in wide and varied trades and employment. We place apprentices and trainees with host organisations across all states and territories, and are a proud partner to more than 200 host organisations including some of Australia’s leading organisations</p>
+
+<img class="img-responsive wow fadeInUp" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logos.gif" alt="">
+
+</div>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!-- <div class="col-md-9">
@@ -50,11 +58,86 @@ get_header();?>
 </div>
 </section>
 
+<section>
+
+    <div class="row">
+    <div class="col-md-8 col-md-offset-2 wow fadeInUp"><h2 class=" tcenter  nomargin__bottom nomnargin__top wow fadeInUp" >Now Hiring</h2>
+    </div>
+
+<div class="wow fadeInUp">
+    <?php include(TEMPLATEPATH . '/page-furniture/jobslider.php');  ?>
+    </div>
+
+</section>
+
+<section class="quicklinks section section-reversed">
+<div class="container">
+<div class="row">
+
+<div class="col-xs-12">
+    <h2 class="nomnargin__top bottommargin wow fadeInUp tcenter" data-wow-delay=".5s">How it Works</h2>
+</div>
 
 
+            
+
+
+<div class="clearfix">
+
+        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".2s">
+        <div class="icon-widget icon-widget__sm">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_1_white.svg" alt="Looking for an Apprentice?">  
+        <h4>Looking for an Apprentice?</h4>
+        <p>Rigorous selection and management processes designed to ensure you get a return.</p>
+        
+        </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".5s">
+        <div class="icon-widget icon-widget__sm">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_2_white.svg" alt="The Apprentice Tool Kit">  
+        <h4>The Apprentice Tool Kit</h4>
+        <p>All the tools you need, including interview tips and resume preparation, to help you land a job.</p>
+    
+        </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".8s">
+        <div class="icon-widget icon-widget__sm">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_3_white.svg" alt="Looking to upskill your workforce?">  
+        <h4>Looking to upskill your workforce?</h4>
+        <p>Apprentice management solutions with a focus on the productivity of your workplace.</p>
+      
+        </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay="1.2s">
+        <div class="icon-widget icon-widget__sm">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_4_white.svg" alt="AI Group">  
+        <h4>Australian Industry Group</h4>
+        <p>A peak industry association which, with its affiliates, represents the interests of over 60,000 businesses.</p>
+
+        </div>
+        </div>
+
+</div><!-- section -->
 
 
 </div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
 
 
 
@@ -67,7 +150,7 @@ get_header();?>
 
 
 
-<div class="section__bdr-top section__bdr-light-grey"></div>
+<div class="section__bdr-top "></div>
 
 <!-- INTRO  -->
 <section class="section">
@@ -105,27 +188,27 @@ get_header();?>
 
 </div><!-- row -->
 
-<div class="section__bdr-top section__bdr-light-grey topmargin bottommargin"></div>
+<!-- <div class="section__bdr-top section__bdr-light-grey topmargin bottommargin"></div> -->
 
 
-
+<!-- 
 <div class="row testimonials">
 
 
     <div class="col-sm-4">
-    <img class="testimonials--avatar" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/avatar.jpg" alt="Avatar">
+    <img class="testimonials--avatar" src="<?php // echo esc_url( get_template_directory_uri() ); ?>/images/avatar.jpg" alt="Avatar">
     <p class="testimonials--text">We place apprentices and trainees with host organisations across all states and territories, and are a proud partner to more than 200 host organisations including some of Australia’s leading organisations.</p>
     <h4>David Smith</h4>
     </div>
 
     <div class="col-sm-4">
-    <img class="testimonials--avatar" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/avatar.jpg" alt="Avatar">
+    <img class="testimonials--avatar" src="<?php // echo esc_url( get_template_directory_uri() ); ?>/images/avatar.jpg" alt="Avatar">
     <p class="testimonials--text">We place apprentices and trainees with host organisations across all states and territories, and are a proud partner to more than 200 host organisations including some of Australia’s leading organisations.</p>
     <h4>David Smith</h4>
     </div>
 
     <div class="col-sm-4">
-    <img class="testimonials--avatar" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/avatar.jpg" alt="Avatar">
+    <img class="testimonials--avatar" src="<?php // echo esc_url( get_template_directory_uri() ); ?>/images/avatar.jpg" alt="Avatar">
     <p class="testimonials--text">We place apprentices and trainees with host organisations across all states and territories, and are a proud partner to more than 200 host organisations including some of Australia’s leading organisations.</p>
     <h4>David Smith</h4>
     </div>
@@ -134,7 +217,10 @@ get_header();?>
 <div class="clearfix"></div>
 
 
-</div><!-- row -->
+</div> -->
+
+
+<!-- row -->
 
 
 
@@ -152,7 +238,7 @@ get_header();?>
 
 
 
-<?php include(TEMPLATEPATH . '/page-furniture/jobslider-large.php');  ?>
+
 <?php include(TEMPLATEPATH . '/page-furniture/boxouts.php');  ?>
 
 

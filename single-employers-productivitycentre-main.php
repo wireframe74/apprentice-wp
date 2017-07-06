@@ -40,6 +40,8 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
 	  echo' <a id="top" class="scroll"></a>';
 	  
 	  ?>
+
+       <h1 class="page-title"><?php the_title(); ?></h1>
 <?php  
 
  the_content();
@@ -53,7 +55,7 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
           
   echo' 
 
-   <div id="rightcolumn" class="col-xs-12 col-md-6">';
+   <div id="rightcolumn" class="col-xs-12 col-md-3">';
 // include(TEMPLATEPATH . '/page-furniture/employernews.php');
   get_sidebar( '' );  
  

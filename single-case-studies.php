@@ -18,7 +18,7 @@ echo'
             // the_loop begin
             if (have_posts()) : while (have_posts()) : the_post();
 			echo'
-  <div class="postCollapse internal" style="width:690px!important;margin-left:0px!important;">
+  <div class="postCollapse internal col-md-9" style="width:690px!important;margin-left:0px!important;">
     <section '; post_class('post'); 
 	echo' style="width:690px!important;">
       <div class="entry" > '; 
@@ -47,7 +47,7 @@ echo'<div class="return"><a href="/resources/case-studies/">Return to Case Studi
             // the_loop end            
             endif; 
 			echo'</div>
-  <div id="rightcolumn">
+  <div id="rightcolumn col-md-3">
      ';
       
 	  echo '<div id="newsletter-signup-right">';include(TEMPLATEPATH . '/page-furniture/newslettersignup.php');echo'</div>'; 

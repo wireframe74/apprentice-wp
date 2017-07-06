@@ -20,11 +20,12 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
 		'fallback_cb' => 'default_header_nav', // name of default function from step 2
 	));
   echo'</div> ';
-  echo'<div class="postCollapse employers">';
+  echo'<div class="postCollapse employers col-md-6">';
             // the_loop begin
 			echo'<section>';
- 		echo' <a id="top" class="scroll"></a>';
-		the_content();
+ 		echo' <a id="top" class="scroll"></a>'; ?>
+       <h1 class="page-title"><?php the_title(); ?></h1>
+		<?php the_content();
 		echo'<a href="/employers/how-we-can-help-your-business/"><div class="enterbutton">Back</div></a>';
 		include(TEMPLATEPATH . '/page-furniture/jump.php');   
 		echo'</section>';

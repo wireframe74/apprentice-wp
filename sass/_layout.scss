@@ -17,7 +17,21 @@ body {
 
 }
 
+.anchor > a  {
+     top:-100px;
+	display: block;
+	position: relative;
+	width: 100%;
+	border: 1px solid transparent;
+}
 
+.anchor {
+	// margin-top: 100px
+}
+
+.postCollapse  {
+	margin-bottom: 80px
+}
 
 .transparent {
 	background-color: transparent;
@@ -48,8 +62,10 @@ width: 100%;
 }
  
 .postCollapse img {
-	max-width:100%;
-	height: auto;
+	    max-width: 100%;
+    height: auto;
+    float: left;
+    margin: 10px 20px 40px 0;
 }
 #breadcrumb {
 	width: 100%;
@@ -101,6 +117,7 @@ width: 100%;
 
 .aig-header.sticky-aig-header {
     position: fixed;
+    z-index:10;
  }
 
 
@@ -166,12 +183,12 @@ transition: background-color .2s;
 
 
 .section-grey-bg {
-	background-color: $light-grey;
+// 	background-color: $light-grey;
 }
 
 
 .section-sm {
-	padding: 30px 0
+	padding: 10px 0
 }
 
 
@@ -183,7 +200,13 @@ transition: background-color .2s;
 	}
 }
 
+.home {
+	
+.section  h2 {
+	margin-bottom:30px;
+}
 
+}
 
 .section {
 	padding: 80px 0;
@@ -228,11 +251,15 @@ transition: background-color .2s;
 	
 	}
 
-
+ 
 	&__bdr-orange {
 
 		border-color: $primary-color;
 	}
+}
+
+.nomargin__bottom {
+margin-bottom: 0!important;
 }
 
 
@@ -240,20 +267,24 @@ transition: background-color .2s;
 	margin:0;
 
 	&__top {
-		margin-top: 0
+		margin-top: 0!important;
+	}
+
+	&__bottom {
+		margin-bottom: 0!important;
 	}
 }
 
 .topmargin {
-margin-top: 40px;
+margin-top: 40px!important;
 
 
 	&__sm {
-	margin-top: 20px
+	margin-top: 20px!important;
 	}
 
 	&__lg {
-	margin-top: 60px
+	margin-top: 60px!important;
 	}
 
 
@@ -262,14 +293,14 @@ margin-top: 40px;
 
 
 .bottommargin {
-	margin-bottom: 40px
-
+	margin-bottom: 40px!important;
+	
 	&__sm {
-		margin-bottom: 20px;
+		margin-bottom: 20px!important;
 	}
 
 	&__lg {
-	margin-bottom: 60px
+	margin-bottom: 60px!important;
 	}
 }
 

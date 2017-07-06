@@ -24,8 +24,12 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
   echo'<div class="postCollapse employers col-md-6">';
             // the_loop begin
 			echo'<section>';
- 		echo' <a id="top" class="scroll"></a>';
-		the_content();
+ 		echo' <a id="top" class="scroll"></a>'; ?>
+
+       <h1 class="page-title"><?php the_title(); ?></h1>
+
+
+	<?php	the_content();
 		include(TEMPLATEPATH . '/page-furniture/jump.php');   
 		echo'</section>';
             // anything after the loop?

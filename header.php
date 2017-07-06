@@ -131,7 +131,7 @@ form input {
 </section>
 
 
-<header class="aig-header sticky-aig-header scrolling clearfix " id="aig-header" role="banner">
+<header class="aig-header sticky-aig-header clearfix" id="aig-header" role="banner">
 
     <div class="container menu-global">
 

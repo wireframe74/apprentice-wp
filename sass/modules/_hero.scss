@@ -34,8 +34,10 @@
 		font-size: 3rem;
 		margin-top:0;
 
+
 		@media (max-width:991px) {
 			font-size:2.6rem;
+			margin-bottom:20px;
 		}
 	}
 	.hero .hero__container {
@@ -48,7 +50,7 @@
 	}
 	.hero .aig-btn {
 		margin-left: 0;
-		margin-top: 20px;
+		margin-top: 15px;
 			font-family:'Roboto Slab', serif;
 			&:hover {
 				text-decoration:none;
@@ -101,6 +103,7 @@
 // background-attachment: fixed;
 	background-size: cover; 
 	text-align: left;
+	background-attachment:fixed;
 	position: relative;
 	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7),url("../images/header.jpg") )
 }

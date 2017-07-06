@@ -1,14 +1,14 @@
 <div class="clearfix"></div>
 
 
-<section class="quicklinks section">
+<section class="quicklinks section section__bdr-top section__bdr-light-grey">
 <div class="container">
 <div class="row">
+ 
 
 
 
-
-        <div class="full-width-sm col-xs-6 wow fadeInUp" data-wow-delay=".2s">
+        <div class="full-width-sm col-xs-6 wow fadeInUp">
             <div class="icon-widget icon-widget__lg icon-widget__orange icon-widget__rev">
                 <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/apprentice.svg" alt="Apprentices">
                 <h3>Apprentices</h3>
@@ -19,7 +19,7 @@
         </div>
 
 
-        <div class="full-width-sm col-xs-6 wow fadeInUp" data-wow-delay=".7s">
+        <div class="full-width-sm col-xs-6 wow fadeInUp" data-wow-delay=".3s">
             <div class="icon-widget icon-widget__lg icon-widget__dark-grey icon-widget__rev">
             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/employer.svg" alt="Employers">         
             <h3>Employers</h3>
@@ -33,7 +33,7 @@
 
 <div class="section clearfix">
 
-        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".2s">
+        <div class="col-xs-6 col-sm-3  wow fadeInUp">
         <div class="icon-widget icon-widget__sm">
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_1.svg" alt="Looking for an Apprentice?">  
         <h4>Looking for an Apprentice?</h4>
@@ -43,7 +43,7 @@
         </div>
 
 
-        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".5s">
+        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".2s">
         <div class="icon-widget icon-widget__sm">
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_2.svg" alt="The Apprentice Tool Kit">  
         <h4>The Apprentice Tool Kit</h4>
@@ -53,7 +53,7 @@
         </div>
 
 
-        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".8s">
+        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay=".6s">
         <div class="icon-widget icon-widget__sm">
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_3.svg" alt="Looking to upskill your workforce?">  
         <h4>Looking to upskill your workforce?</h4>
@@ -63,7 +63,7 @@
         </div>
 
 
-        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay="1.2s">
+        <div class="col-xs-6 col-sm-3  wow fadeInUp" data-wow-delay="1s">
         <div class="icon-widget icon-widget__sm">
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/icons/quick_link_4.svg" alt="AI Group">  
         <h4>Australian Industry Group</h4>

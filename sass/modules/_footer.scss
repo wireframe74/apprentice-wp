@@ -1,6 +1,36 @@
+.owl-next {
+	background: url(../images/icons/arrow.svg) no-repeat;
+    background-size: 14px;
+    background-position: center center;
+    background-color: #f47321;
+    top: 50%;
+    margin-top: -18px;
+    left: -36px;
+    zoom: 1;
+    width: 42px;
+    height: 42px;
+    line-height: 32px;
+    border: none;
+    color: #666;
+    background-color: #FFF;
+    font-size: 18px;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background: url(../images/icons/arrow.svg) no-repeat;
+    background-size: 14px;
+    background-position: center center;
+}
+
+
+
 
 
 .footer-links {
+
+
 
 	@media (min-width:992px) {
 	 text-align:right; 
@@ -10,6 +40,7 @@
 
 	@media (max-width:991px) {
 	 text-align:left; 
+	 margin-top:20px;
 	}
 
 
@@ -69,9 +100,60 @@ bottom:0;
 width:100%;
 z-index:10;
 
-.form-inline {
-	margin-left:10px
+
+	
+
+		.form-inline {
+			margin-left:10px;
+			@media (max-width:490px) {
+				display: none
+			}
+		}
+
+.owl-next {
+
+	@media (max-width:490px) {
+		display:block!important;
+		opacity:1!important;
+	}
+
+    background: url(../images/icons/arrow.svg) no-repeat;
+    background-size: 14px;
+    background-position: center center;
+    background-color: #f47321;
+    margin-top: -3px;
+    zoom: 1;
+    width: 42px;
+    height: 42px;
+    line-height: 32px;
+    border: none;
+    color: #666;
+    background-color: #f47321;
+    font-size: 18px;
+    border-radius: 50%;
+    opacity: 1;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background: url(../images/icons/arrow.svg) no-repeat;
+    background-size: 14px;
+    background-position: center center;
+    float: left;
+    border: 1px solid #898989;
+    margin-left: 10px;
 }
+
+
+	input.form-control,
+	.form-group {
+
+		@media (max-width:860px) {
+			display:none;
+		}
+}
+
+
+
 .form-control {
  margin: 10px 0;
     background: transparent;
@@ -81,19 +163,34 @@ z-index:10;
 }
 
 .btn {
-	 border-radius: 50px;
-	 background-color:$primary-color;
-	 border:none;
-	 color:#fff;	
-	 font-size:1.1rem;
-	 min-width:180px;
-}
+			 border-radius: 50px;
+			 background-color:$primary-color;
+			 border:none;
+			 color:#fff;	
+			 font-size:1.1rem;
+			 min-width:180px;
+
+			 @media (max-width:859px) {
+			 	margin-top:5px;
+			 }
+
+
+			 @media (max-width:490px) {
+			 	display:none
+			 }
+	}
 
 	 h3 {
 	 	font-size: 1.2rem;
 	    font-weight: normal;
 	        line-height: 1rem;
     margin: 13px 0 0 13px;
+
+    @media (max-width:360px) {
+    	font-size:1.1rem;
+    }
+
+    
 	 }
 
 

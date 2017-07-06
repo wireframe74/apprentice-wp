@@ -64,7 +64,7 @@
 	 		echo'<div class="postCollapse col-xs-12 col-md-6">';
 	 		endif; ?>
 
-
+<?php edit_post_link(); ?>
 
 <?php if (!is_home() ) include(TEMPLATEPATH . '/page-furniture/maincontent.php');  
 else  include(TEMPLATEPATH . '/page-furniture/blogposts.php');?>

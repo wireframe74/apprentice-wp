@@ -33,6 +33,8 @@ echo'<div id="aigwd-maincontentcontainer" class="row">';
 			echo'<section>';
      
 	  echo' <a id="top" class="scroll"></a>';?>
+
+       <h1 class="page-title"><?php the_title(); ?></h1>
 <?php the_content();?>
 <?php // include(TEMPLATEPATH . '/page-furniture/jumpcontent.php');   ?>
 <?php	echo' </section>';

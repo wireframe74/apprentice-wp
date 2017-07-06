@@ -47,29 +47,35 @@ position:relative;
 
 
 .aig-logo {
-    width: 138px; 
+    width: 160px; 
     height: 43px;
     display: inline-block;
     padding: 0;
-    background: transparent url(../images/logo.svg) center center no-repeat;
+//     background: transparent url(../images/logo.svg) center center no-repeat;
+
+
+background: transparent url(../images/logo-aigts.svg) center center no-repeat;
+    
+
+
     background-clip: border-box;
     background-origin: padding-box;
     background-position: 0 50%;
     background-size: contain;
     overflow: hidden;
     text-indent: -9999em; 
-
+margin-top:-5px;
  
 	&--white {
 
 
 	
 
-	background: transparent url(../images/logo.svg) center center no-repeat;
-	background-size: 93pt 33px;
+background: transparent url(../images/logo-aigts.svg) center center no-repeat;
+// 	background-size: 93pt 33px;
 	vertical-align: middle;
-	padding-top: 5px;
-	margin-top: -7px;
+// 	padding-top: 5px;
+// 	margin-top: -7px;
 	position: absolute;
 	top: 2px;
 	}
@@ -93,7 +99,13 @@ position:relative;
     color: #fff;
     padding: 10px 8px 9px; 
 	text-transform:uppercase;
+	    font-weight: 600;
     }
+
+	@media (min-width:991px) and (max-width:1150px) {
+	font-size:13px;
+	}
+
 
 
 
